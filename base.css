@@ -250,16 +250,16 @@ section.home {
     margin: 60px 0;
 }
 
-.disco-container{
+.disco-container {
     overflow: hidden;
-   
+
 }
 
 .album-slider {
     display: flex;
     overflow-x: auto;
     width: 900px;
-    padding-bottom: 40px; 
+    padding-bottom: 40px;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
 }
@@ -267,20 +267,25 @@ section.home {
 .album-slider::-webkit-scrollbar {
     width: 10px;
     height: 15px;
-  }
-  .album-slider::-webkit-scrollbar-thumb {
+}
+
+.album-slider::-webkit-scrollbar-thumb {
     background: #3D0066;
     border-radius: 10px;
-  }
-  .album-slider::-webkit-scrollbar-track {
+}
+
+.album-slider::-webkit-scrollbar-track {
     background: transparent;
-  }
+}
 
 .albums {
-    margin: 0 50px;
     width: 500px;
     flex-shrink: 0;
     height: 100%;
+}
+
+.albums:not(:last-child) {
+    margin-right: 50px;
 }
 
 .cover-image {
