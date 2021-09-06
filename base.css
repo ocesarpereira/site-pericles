@@ -297,8 +297,7 @@ section.home {
 }
 
 .album-slider::-webkit-scrollbar-track {
-    background: #FDC500;
-
+    border: 1px solid #FDC500;
     border-radius: 10px;
 }
 
