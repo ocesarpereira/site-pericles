@@ -176,7 +176,7 @@ section.home {
 
 .dates-container {
     display: flex;
-    justify-content: flex-end;
+    /* justify-content: flex-end; */
     align-items: center;
 }
 
@@ -191,8 +191,7 @@ section.home {
 }
 
 .place-time {
-    margin-left: auto;
-    margin-right: 250px;
+    margin: auto;
     display: flex;
 }
 
@@ -363,12 +362,13 @@ iframe {
 .other-contact-forms {
     background-color: #3D0066;
     width: 100%;
-    height: 100%;
+    height: 750px;
+    ;
     padding: 20px;
 }
 
 .contact form {
-    border-radius: 8px;
+    border-radius: 8px 0 0 8PX;
 }
 
 .contact form fieldset {
@@ -445,16 +445,18 @@ iframe {
 }
 
 .other-contact-forms {
-    background-color: #fdc500;
+    background-color: #fff;
+    border: 2px solid #3D0066;
     padding: 20px;
     border-radius: 0 8px 8px 0;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    align-items: center;
 }
 
 .acessorias {
-    margin: 16% 0;
+    width: 200px;
 }
 
 .acessorias p {
@@ -467,7 +469,7 @@ iframe {
 
 p.bold {
     font-weight: 700;
-    color: #232323;
+    color: #3D0066;
 }
 
 footer {
@@ -506,19 +508,80 @@ footer {
     margin-bottom: 10px;
 }
 
-@media only screen and (min-width:90em) {
+@media only screen and (min-width:56.25em) and (max-width:90em) {
+
     .agenda-container {
-        width: 30%
+        width: 90%;
+    }
+
+    .mes {
+        width: 100%;
+    }
+
+    .album-slider {
+        width: 600px;
+    }
+
+    .contact-container {
+        width: 90%;
+    }
+
+    .contact form,
+    .other-contact-forms {
+        width: 50%;
+        height: 650px;
+    }
+
+    .contact textarea {
+        width: 120%;
+        height: 120px;
+    }
+
+    .contact [type="text"] {
+        width: 90%;
+    }
+
+    .contact [type="submit"] {
+        margin-top: 20px;
+    }
+
+}
+
+@media screen and (min-width:38.75em) and (max-width:55em) {
+    .agenda-container {
+        width: 90%
     }
 
     .history-box {
-        width: 50%;
+        width: 80%;
         height: 50%;
     }
 
-    .contact {
-        width: 60%;
-        margin: 60px auto;
+    .album-slider {
+        width: 400px;
+    }
+
+    .contact-container {
+        width: 90%;
+    }
+
+    .contact form,
+    .other-contact-forms {
+        width: 90%;
+    }
+
+    .contact [type="email"] {
+        width: 95%;
+    }
+
+    .contact textarea {
+        width: 100%;
+        height: 120px;
+        background-color: #C86BFA;
+    }
+
+    .contact [type="text"] {
+        width: 90%;
     }
 
     .acessorias {
@@ -528,4 +591,116 @@ footer {
     .albums:not(:last-child) {
         margin-right: 150px;
     }
+}
+
+@media screen and (max-width: 610px) {
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: unset;
+        padding: 0;
+    }
+
+    header h1 {
+        margin: 5px auto;
+        /* padding-top: 20px; */
+    }
+
+    nav {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    nav li a {
+        color: #fff;
+        font-size: 0.9rem;
+    }
+
+    li:not(:last-child) {
+        margin-right: 10px;
+    }
+
+    .social-media {
+        width: 100%;
+        height: 100%;
+        background-color: #3d006677;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .agenda-container {
+        width: 90%;
+    }
+
+    .month-title {
+        margin-bottom: 20px;
+    }
+
+    .dates-container {
+        /* flex-direction: column;
+        align-items: flex-start; */
+        flex-wrap: wrap;
+    }
+
+    .dates-container button {
+        width: 95px;
+    }
+
+    .history {
+        height: fit-content;
+    }
+
+    .history-box {
+        flex-direction: column;
+    }
+
+    .history-image,
+    .history-box p {
+        width: 95%;
+    }
+
+    .history-image:first-child,
+    .history-image:last-child {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .history-box p {
+        font-size: 0.95rem;
+        line-height: 1.35;
+    }
+
+    .history-box p:first-of-type {
+        margin: 20px 0;
+    }
+
+    .history-box p:last-of-type {
+        margin-bottom: 20px;
+    }
+
+    .history-image:last-child {
+        padding-bottom: 20px;
+    }
+
+    .album-slider {
+        width: 350px;
+    }
+
+    .albums {
+        width: 350px;
+    }
+
+    .albums:not(:last-child) {
+        margin-right: 25px;
+    }
+
+    .cover-image,
+    iframe {
+        width: 100%;
+    }
+
 }
