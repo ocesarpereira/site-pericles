@@ -635,6 +635,10 @@ footer {
         width: 90%;
     }
 
+    .mes:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
     .month-title {
         margin-bottom: 20px;
     }
@@ -646,7 +650,7 @@ footer {
     }
 
     .place-time {
-        width: 75%;
+        width: 65%;
     }
 
     .dates-container button {
