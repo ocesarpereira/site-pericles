@@ -626,7 +626,6 @@ footer {
     .social-media {
         width: 100%;
         height: 100%;
-        background-color: #3d006677;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -646,12 +645,20 @@ footer {
         flex-wrap: wrap;
     }
 
+    .place-time {
+        width: 75%;
+    }
+
     .dates-container button {
         width: 95px;
     }
 
     .history {
         height: fit-content;
+    }
+
+    .history .title {
+        margin-bottom: 10px;
     }
 
     .history-box {
@@ -682,8 +689,8 @@ footer {
         margin-bottom: 20px;
     }
 
-    .history-image:last-child {
-        padding-bottom: 20px;
+    .history-image-2 {
+        display: none;
     }
 
     .album-slider {
@@ -703,4 +710,62 @@ footer {
         width: 100%;
     }
 
+    .contact-container {
+        flex-wrap: wrap;
+        width: 90%;
+        /* border-radius: 8px; */
+    }
+
+    .contact form {
+        border-radius: 8px 8px 0 0;
+    }
+
+    .contact form,
+    .other-contact-forms {
+        height: fit-content;
+    }
+
+    .contact form legend {
+        font-size: 1.8rem;
+        margin-bottom: 0;
+    }
+
+    .input-group,
+    .label {
+        margin-bottom: 10px;
+    }
+
+    .contact textarea {
+        height: 120px;
+        width: 100%;
+    }
+
+    .contact [type="tel"] {
+        width: 50%;
+    }
+
+    .contact [type="text"] {
+        width: 100%;
+    }
+
+    .other-contact-forms {
+        border-radius: 0 0 8px 8px;
+        align-items: flex-start;
+    }
+
+    .acessorias:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    .acessorias p:not(:last-child) {
+        margin-bottom: 5px;
+    }
+
+    .sponsors {
+        width: 80%;
+    }
+
+    .footer-text p {
+        font-size: 80%
+    }
 }
