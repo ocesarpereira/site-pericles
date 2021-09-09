@@ -34,7 +34,7 @@ header h1 a {
 
 header li a {
     color: #3D0066;
-    /* mudar isso aqui depois */
+    display: block;
 }
 
 header h1 a:hover,
@@ -52,6 +52,12 @@ header h1 a {
     font-family: 'Teko', sans-serif;
     font-size: 2.85rem;
 }
+
+#btn-mobile {
+    display: none;
+}
+
+
 
 nav ul {
     display: flex;
@@ -596,36 +602,117 @@ footer {
 @media screen and (max-width: 610px) {
 
     header {
-        flex-direction: column;
         align-items: center;
-        justify-content: unset;
-        padding: 0;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        background-color: #3d0066;
+        overflow-y: hidden;
+        overflow-x: visible;
+        padding: 5px 20px;
+        /* margin: 10px 0; */
     }
 
     header h1 {
-        margin: 5px auto;
-        /* padding-top: 20px; */
+        margin-right: 1rem;
+    }
+
+    #btn-mobile {
+        display: flex;
+        align-items: center;
+    }
+
+    button {
+        color: #3d0066;
+        background-color: #fdc500;
+        font-weight: bold;
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+        border: none;
+        gap: .5rem;
+    }
+
+    /* button:active {
+        background-color: #C86BFA;
+        transition: 0.3s;
+    } */
+
+
+    #hamburguer {
+        border-top: 3px solid;
+        width: 20px;
+        color: #3D0066;
+    }
+
+    #hamburguer::after,
+    #hamburguer::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 3px;
+        margin-top: 5px;
+        transition: 0.3s;
+        background: #3d0066;
+        position: relative;
+    }
+
+    #nav.active #hamburguer {
+        border-top-color: transparent;
+    }
+
+    #nav.active #hamburguer::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+
+    #nav.active #hamburguer::before {
+        transform: rotate(135deg);
     }
 
     nav {
-        width: 90%;
         display: flex;
-        justify-content: center;
-        margin-top: 10px;
+        justify-content: space-between;
+    }
+
+    #menu {
+        /* display: none; */
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 52.364px;
+        right: 0px;
+        height: 0px;
+        background-color: #3d0066;
+        transition: 0.6s;
+        z-index: 1000;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+    #nav.active #menu {
+        /* flex-direction: column; */
+        height: calc(100vh + 10px);
+        visibility: visible;
+        overflow-y: hidden;
     }
 
     nav li a {
         color: #fff;
         font-size: 0.9rem;
+        padding: 2rem 0;
+        margin: 0 2rem;
+        margin-right: 0;
     }
 
     li:not(:last-child) {
         margin-right: 10px;
     }
 
+    section.home {
+        margin: 0;
+    }
+
     .social-media {
-        width: 100%;
-        height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
