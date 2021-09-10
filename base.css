@@ -345,8 +345,8 @@ iframe {
 /* media querie = width: 75%; */
 /* 4k = width: 50%; */
 .contact-container {
-    /* width: 45%; */
-    width: 75%;
+    width: 45%;
+     /* width: 75%; */
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -553,9 +553,19 @@ footer {
 
 }
 
-@media screen and (min-width:38.75em) and (max-width:55em) {
+@media screen and (min-width:38.75em) and (max-width:56.24em) {
+    
+    header {
+        padding: 20px 2%; 
+    }
+    
     .agenda-container {
         width: 90%
+    }
+
+    .history{
+        height: fit-content;
+        max-height: 100%;
     }
 
     .history-box {
@@ -599,7 +609,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 610px) {
+@media screen and (max-width: 38.7em) {
 
     header {
         align-items: center;
@@ -623,8 +633,8 @@ footer {
     }
 
     header button {
-        color: #3d0066;
-        background-color: #fdc500;
+        background-color: transparent;
+        color: #fdc500;
         font-weight: bold;
         font-size: 1rem;
         padding: 0.5rem 1rem;
@@ -641,7 +651,7 @@ footer {
     #hamburguer {
         border-top: 3px solid;
         width: 20px;
-        color: #3D0066;
+        color: #fdc500;
     }
 
     #hamburguer::after,
@@ -652,7 +662,7 @@ footer {
         height: 3px;
         margin-top: 5px;
         transition: 0.3s;
-        background: #3d0066;
+        background: #fdc500;
         position: relative;
     }
 
@@ -738,6 +748,8 @@ footer {
 
     .place-time {
         width: 65%;
+        margin: 0;
+        margin-right: auto;
     }
 
     .dates-container button {

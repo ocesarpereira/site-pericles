@@ -12,13 +12,14 @@
 </head>
 
 <body>
-    <header id="header" >
+    <header id="header">
         <h1><a href="#home" id="logo">Péricles</a></h1>
         <nav id="nav">
-            <button id="btn-mobile">Menu
+            <button aria-label="Abrir menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu"
+                aria-expanded="false">
                 <span id="hamburguer"></span>
             </button>
-            <ul id="menu" >
+            <ul id="menu" role="menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#agenda">Agenda</a></li>
                 <li><a href="#history">História</a></li>
@@ -31,9 +32,7 @@
     </header>
 
     <section class="home" id="home">
-        <!-- <div class="text-home">
-            <h3>Péricles</h3>
-        </div> -->
+
         <div class="social-media">
             <a href="https://facebook.com/"><i class="fa fa-facebook"> </i></a>
             <a href="https://twitter.com/"><i class="fab fa-twitter"> </i></a>
